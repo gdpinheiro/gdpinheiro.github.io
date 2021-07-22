@@ -8,18 +8,51 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         background-color: #2A2A28;
         color: #EBEBEB;
+        text-align: center;
       }
       #titulo {
         font-family: Times, serif;
+      }
+      #apresentacao {
+        background-color: #3D6566;
+        color: #EBEBEB;
+        border: solid #4F7D68;
+        width: 600px;
+        padding: 10px 0px;
+        border-radius: 5px;
+        margin: 5px auto;
+        }
+      #foto{
+        background-color: #352244;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      #habilidades-list {
+        background-color: #3D6566;
+        padding: 5px;
+        border: solid #4F7D68;
+        width: 300px;
+        border-radius: 5px;
+      }
+      #hobbies-list {
+        background-color: #3D6566;
+        padding: 5px;
+        border: solid #4F7D68;
+        width: 300px;
+        border-radius: 5px;
+      }
+      .list-item {
+        list-style-position: inside;
+        text-align: left;
       }
 
     </style>
   </head>
   <body>
     <h1 id="titulo">Bem vinde ao meu portfólio!</h1>
-    <img src="profile picture.jpg" alt="Foto do Giovanni" width="200px" id="inicio">
-    <p>Meu nome é <strong>Giovanni Duarte Pinheiro</strong>, tenho 24 anos
-      <br> Sou estudante de Desenvolvimento Web na Trybe
+    <img src="profile picture.jpg" alt="Foto do Giovanni" width="200px" id="foto">
+    <p id="apresentacao">Meu nome é <strong>Giovanni Duarte Pinheiro</strong>, tenho 24 anos
+      <br>Sou estudante de Desenvolvimento Web na Trybe
       <br>Brasileiro | Assis, São Paulo
     </p>
     <a href="#habilidades">Lista de Habilidades</a>
@@ -27,24 +60,24 @@
     <a href="https://www.youtube.com/user/pegzch" target="_blank">Indicação de conteúdo: Canal do Rick Beato, produtor musical</a>
 
 
-    <ul id="habilidades"> <strong>Minhas Habilidades</strong>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Empatia</li>
-      <li>Disposição</li>
-      <li>Vontade de ajudar</li>
+    <ul id="habilidades-list"> <strong>Minhas Habilidades</strong>
+      <li class="list-item">HTML</li>
+      <li class="list-item">CSS</li>
+      <li class="list-item">JavaScript</li>
+      <li class="list-item">Empatia</li>
+      <li class="list-item">Disposição</li>
+      <li class="list-item">Vontade de ajudar</li>
     </ul>
 
-    <ul><strong>Meus Hobbies</strong>
-      <li>Ver Séries</li>
-      <li>Ver Filmes (Terror principalmente)</li>
-      <li>Ouvir Música</li>
-      <li>Jogar</li>
-      <li>Ver vídeos no Youtube</li>
-      <li>Tocar repique</li>
+    <ul id="hobbies-list"><strong>Meus Hobbies</strong>
+      <li class="list-item">Ver Séries</li>
+      <li class="list-item">Ver Filmes (Terror principalmente)</li>
+      <li class="list-item">Ouvir Música</li>
+      <li class="list-item">Jogar</li>
+      <li class="list-item">Ver vídeos no Youtube</li>
+      <li class="list-item">Tocar repique</li>
     </ul>
           
-    <a href="#inicio">Voltar ao ínicio</a>
+    <a href="#titulo">Voltar ao ínicio</a>
   </body>
 </html>
