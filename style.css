@@ -38,6 +38,9 @@ body {
   border: solid #4f7d68;
   width: 300px;
   border-radius: 5px;
+  float: left;
+  position: relative;
+  left: 12%;
 }
 #hobbies-list {
   background-color: #3d6566;
@@ -45,6 +48,9 @@ body {
   border: solid #4f7d68;
   width: 300px;
   border-radius: 5px;
+  float: right;
+  position: relative;
+  right: 14.5%;
 }
 .list-item {
   list-style-position: inside;
@@ -74,4 +80,13 @@ body {
   color: #ebebeb;
   padding: 5px 10px;
   border-radius: 5px;
+}
+.listas {
+  padding: 2em;
+}
+
+.rodape {
+  position: relative;
+  display: inline-block;
+  top: 5em;
 }
