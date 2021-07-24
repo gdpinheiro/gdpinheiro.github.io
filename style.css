@@ -1,66 +1,86 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #2A2A28;
-  color: #EBEBEB;
+  background-color: #2a2a28;
+  color: #ebebeb;
   text-align: center;
 }
 #titulo {
   font-family: Times, serif;
 }
 #apresentacao {
-  background-color: #3D6566;
-  color: #EBEBEB;
-  border: solid #4F7D68;
-  width: 600px;
-  padding: 10px 0px;
+  float: right;
+  background-color: #3d6566;
+  color: #ebebeb;
+  border: solid #4f7d68;
+  max-width: 350px;
+  padding: 10px 10px;
   border-radius: 5px;
-  margin: 5px auto;
-  }
-#foto{
-  background-color: #352244;
-  padding: 5px;
-  border-radius: 5px;
+  margin-top: 7em;
+  position: relative;
+  left: 12%;
 }
+#foto {
+  float: left;
+  background-color: #352244;
+  padding: 10px;
+  border-radius: 15px;
+  position: relative;
+  left: 11%;
+}
+.foto-apresentacao {
+  display: inline-block;
+  text-align: center;
+}
+
 #habilidades-list {
-  background-color: #3D6566;
+  background-color: #3d6566;
   padding: 5px;
-  border: solid #4F7D68;
-  width: 300px;
+  border: solid #4f7d68;
+  width: 350px;
   border-radius: 5px;
 }
 #hobbies-list {
-  background-color: #3D6566;
+  background-color: #3d6566;
   padding: 5px;
-  border: solid #4F7D68;
-  width: 300px;
+  border: solid #4f7d68;
+  max-width: 350px;
   border-radius: 5px;
 }
 .list-item {
   list-style-position: inside;
   text-align: left;
 }
-#indicacao{
-  background-color: #4F7D68;
-  color: #EBEBEB;
+.list-item:nth-child(odd) {
+  font-weight: bold;
+}
+
+#indicacao {
+  background-color: #4f7d68;
+  color: #ebebeb;
   padding: 5px 10px;
   border-radius: 5px;
 }
 
 #link-habilidades {
-  background-color: #4F7D68;
-  color: #EBEBEB;
+  background-color: #4f7d68;
+  color: #ebebeb;
   padding: 5px 10px;
   border-radius: 5px;
 }
 #link-indicacao {
-  background-color: #4F7D68;
-  color: #EBEBEB;
+  background-color: #4f7d68;
+  color: #ebebeb;
   padding: 5px 10px;
   border-radius: 5px;
 }
 #inicio {
-  background-color: #4F7D68;
-  color: #EBEBEB;
+  background-color: #4f7d68;
+  color: #ebebeb;
   padding: 5px 10px;
   border-radius: 5px;
+}
+.listas {
+  padding: 2em;
+  display: inline-block;
+  text-align: center;
 }
