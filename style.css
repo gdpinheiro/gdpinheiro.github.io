@@ -11,12 +11,9 @@ body {
   color: #ebebeb;
   margin: 2em;
 }
-#link-habilidades {
-  background-color: #4f7d68;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-#link-indicacao {
+#link-habilidades,
+#link-indicacao,
+#link-projetos {
   background-color: #4f7d68;
   padding: 5px 10px;
   border-radius: 5px;
@@ -42,16 +39,23 @@ body {
   position: relative;
   left: -7em;
 }
-.listas {
+.section-listas {
   padding: 2em;
   text-align: center;
 }
-#habilidades-list {
+.listas {
   background-color: #3d6566;
   padding: 5px;
   border: solid #4f7d68;
-  width: 310px;
   border-radius: 5px;
+}
+.listas li {
+  list-style-position: inside;
+  text-align: left;
+}
+
+#habilidades-list {
+  width: 310px;
   display: inline-block;
 }
 #hobbies-list {
@@ -62,13 +66,16 @@ body {
   border-radius: 5px;
   display: inline-block;
 }
-.list-item {
-  list-style-position: inside;
-  text-align: left;
+
+#projetos-list {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.list-item:nth-child(odd) {
-  font-weight: bold;
+#projetos-list li {
+  text-align: center;
 }
+
 .rodape {
   color: #ebebeb;
   position: relative;
