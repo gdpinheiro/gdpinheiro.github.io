@@ -1,86 +1,126 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #2a2a28;
-  color: #ebebeb;
+  background-color: hsl(60, 2%, 16%);
+  color: hsl(0, 0%, 92%);
   text-align: center;
 }
 #titulo {
   font-family: Times, serif;
 }
+.cabecalho {
+  color: hsl(0, 0%, 92%);
+  margin: 2em;
+}
+#link-habilidades,
+#link-indicacao,
+#link-projetos {
+  background-color: hsl(153, 23%, 40%);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.foto-apresentacao {
+  height: 23em;
+}
 #apresentacao {
-  float: right;
-  background-color: #3d6566;
+  background-color: hsl(181, 25%, 32%);
   color: #ebebeb;
-  border: solid #4f7d68;
+  border: solid hsl(153, 23%, 40%);
   max-width: 350px;
   padding: 10px 10px;
   border-radius: 5px;
-  margin-top: 7em;
   position: relative;
-  left: 12%;
+  top: -17em;
+  left: 50%;
 }
 #foto {
-  float: left;
-  background-color: #352244;
+  background-color: hsl(274, 33%, 20%);
   padding: 10px;
   border-radius: 15px;
   position: relative;
-  left: 11%;
+  left: -7em;
 }
-.foto-apresentacao {
-  display: inline-block;
+.section-listas {
+  padding: 2em;
   text-align: center;
 }
-
-#habilidades-list {
-  background-color: #3d6566;
+.listas {
+  background-color: hsl(181, 25%, 32%);
   padding: 5px;
-  border: solid #4f7d68;
-  width: 350px;
+  border: solid hsl(153, 23%, 40%);
   border-radius: 5px;
 }
-#hobbies-list {
-  background-color: #3d6566;
-  padding: 5px;
-  border: solid #4f7d68;
-  max-width: 350px;
-  border-radius: 5px;
-}
-.list-item {
+.listas li {
   list-style-position: inside;
   text-align: left;
 }
-.list-item:nth-child(odd) {
-  font-weight: bold;
+
+#habilidades-list {
+  width: 310px;
+  display: inline-block;
+}
+#hobbies-list {
+  background-color: hsl(181, 25%, 32%);
+  padding: 5px;
+  border: solid hsl(153, 23%, 40%);
+  max-width: 350px;
+  border-radius: 5px;
+  display: inline-block;
 }
 
+.projetos {
+  margin-bottom: 50px;
+}
+#projetos-list {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+}
+#projetos-list li {
+  text-align: center;
+}
+
+.rodape {
+  color: hsl(0, 0%, 92%);
+  position: relative;
+  margin-bottom: 30px;
+}
 #indicacao {
-  background-color: #4f7d68;
-  color: #ebebeb;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-#link-habilidades {
-  background-color: #4f7d68;
-  color: #ebebeb;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-#link-indicacao {
-  background-color: #4f7d68;
-  color: #ebebeb;
+  background-color: hsl(153, 23%, 40%);
   padding: 5px 10px;
   border-radius: 5px;
 }
 #inicio {
-  background-color: #4f7d68;
-  color: #ebebeb;
+  background-color: hsl(153, 23%, 40%);
   padding: 5px 10px;
   border-radius: 5px;
 }
-.listas {
-  padding: 2em;
-  display: inline-block;
-  text-align: center;
+
+#nav {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+#nav a,
+.link {
+  text-decoration: none;
+  margin: 10px;
+  padding: 8px;
+  border: 3px solid hsl(181, 25%, 32%);
+  border-radius: 5px;
+  outline: 2px solid hsl(181, 25%, 32%);
+  outline-offset: -4px;
+  transition: outline-offset 150ms ease;
+}
+#nav a:link,
+#nav a:visited,
+.link:link,
+.link:visited,
+.projeto-link:link,
+.projeto-link:visited {
+  color: hsl(0, 0%, 92%);
+}
+
+#nav a:hover,
+.link:hover {
+  outline-offset: 2px;
 }
