@@ -1,20 +1,20 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #2a2a28;
-  color: #ebebeb;
+  background-color: hsl(60, 2%, 16%);
+  color: hsl(0, 0%, 92%);
   text-align: center;
 }
 #titulo {
   font-family: Times, serif;
 }
 .cabecalho {
-  color: #ebebeb;
+  color: hsl(0, 0%, 92%);
   margin: 2em;
 }
 #link-habilidades,
 #link-indicacao,
 #link-projetos {
-  background-color: #4f7d68;
+  background-color: hsl(153, 23%, 40%);
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -22,9 +22,9 @@ body {
   height: 23em;
 }
 #apresentacao {
-  background-color: #3d6566;
+  background-color: hsl(181, 25%, 32%);
   color: #ebebeb;
-  border: solid #4f7d68;
+  border: solid hsl(153, 23%, 40%);
   max-width: 350px;
   padding: 10px 10px;
   border-radius: 5px;
@@ -33,7 +33,7 @@ body {
   left: 50%;
 }
 #foto {
-  background-color: #352244;
+  background-color: hsl(274, 33%, 20%);
   padding: 10px;
   border-radius: 15px;
   position: relative;
@@ -44,9 +44,9 @@ body {
   text-align: center;
 }
 .listas {
-  background-color: #3d6566;
+  background-color: hsl(181, 25%, 32%);
   padding: 5px;
-  border: solid #4f7d68;
+  border: solid hsl(153, 23%, 40%);
   border-radius: 5px;
 }
 .listas li {
@@ -59,34 +59,68 @@ body {
   display: inline-block;
 }
 #hobbies-list {
-  background-color: #3d6566;
+  background-color: hsl(181, 25%, 32%);
   padding: 5px;
-  border: solid #4f7d68;
+  border: solid hsl(153, 23%, 40%);
   max-width: 350px;
   border-radius: 5px;
   display: inline-block;
 }
 
+.projetos {
+  margin-bottom: 50px;
+}
 #projetos-list {
   width: 600px;
   margin-left: auto;
   margin-right: auto;
+  list-style: none;
 }
 #projetos-list li {
   text-align: center;
 }
 
 .rodape {
-  color: #ebebeb;
+  color: hsl(0, 0%, 92%);
   position: relative;
+  margin-bottom: 30px;
 }
 #indicacao {
-  background-color: #4f7d68;
+  background-color: hsl(153, 23%, 40%);
   padding: 5px 10px;
   border-radius: 5px;
 }
 #inicio {
-  background-color: #4f7d68;
+  background-color: hsl(153, 23%, 40%);
   padding: 5px 10px;
   border-radius: 5px;
+}
+
+#nav {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+#nav a,
+.link {
+  text-decoration: none;
+  margin: 10px;
+  padding: 8px;
+  border: 3px solid hsl(181, 25%, 32%);
+  border-radius: 5px;
+  outline: 2px solid hsl(181, 25%, 32%);
+  outline-offset: -4px;
+  transition: outline-offset 150ms ease;
+}
+#nav a:link,
+#nav a:visited,
+.link:link,
+.link:visited,
+.projeto-link:link,
+.projeto-link:visited {
+  color: hsl(0, 0%, 92%);
+}
+
+#nav a:hover,
+.link:hover {
+  outline-offset: 2px;
 }
