@@ -1,11 +1,15 @@
-import React from 'react'
+import React from 'react';
+import Header from '../components/Header';
+import MobileMenu from '../components/MobileMenu';
 
 function Contact() {
   return (
     <div>
-      <h3>This is the Contact.</h3>
+      <Header />
+      <MobileMenu />
+      <h1>Contact</h1>
     </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

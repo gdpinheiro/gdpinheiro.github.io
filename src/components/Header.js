@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 function Header() {
   return (
     <div>
-      <h3>This is the header.</h3>
+      <button>
+        <i className='fas fa-bars'></i>
+      </button>
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
