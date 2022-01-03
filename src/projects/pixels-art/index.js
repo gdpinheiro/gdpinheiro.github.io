@@ -2,6 +2,22 @@ import React from 'react';
 import './style.css';
 
 function index() {
+  // Create Board
+  function createPixelBoard(height, width) {
+    console.log(height, width);
+    return <div>{(height, width)}</div>;
+  }
+
+  // className = 'pixel';
+
+  // classList.remove('selected');
+
+  // Select a Color
+
+  // Paint a Pixel
+
+  // Board Cleaner
+
   return (
     <div>
       <h1 id='title'>Paleta de Cores</h1>
@@ -12,7 +28,7 @@ function index() {
         <div className='color' id='blue'></div>
       </section>
       <button id='clear-board'>Limpar</button>
-      <section id='pixel-board'></section>
+      <section id='pixel-board'>{createPixelBoard(5, 5)}</section>
     </div>
   );
 }

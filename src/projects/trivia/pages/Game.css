@@ -1,0 +1,13 @@
+.correctAnswer {
+  border: 3px solid rgb(6, 240, 15);
+}
+
+.wrongAnswer {
+  border: 3px solid red;
+}
+
+/* !! APAGAR ABAIXO
+.wrong {
+  background-color: red;
+}
+*/
