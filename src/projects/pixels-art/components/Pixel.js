@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 function Pixel(props) {
   const [currentColor, setCurrentColor] = useState('white');
-
   const { selectedColor } = props;
 
   // Paint a Pixel
