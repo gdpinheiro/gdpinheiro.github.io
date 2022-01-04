@@ -3,7 +3,7 @@ import './style.css';
 import './components/Pixel';
 import Pixel from './components/Pixel';
 
-function Index() {
+function PixelsArt() {
   const [selectedHeight, setSelectedHeight] = useState(5);
   const [selectedWidth, setSelectedWidth] = useState(5);
   const [selectedColor, setSelectedColor] = useState('');
@@ -62,7 +62,7 @@ function Index() {
   };
 
   return (
-    <div>
+    <main>
       <h1 id='title'>Paleta de Cores</h1>
       <div id='color-palette'>
         <div className='color black' id='black' onClick={selectColor}></div>
@@ -79,7 +79,8 @@ function Index() {
             name='altura'
             id='input-altura'
             defaultValue='5'
-            min='1'
+            min='5'
+            max='50'
             onChange={({ target: { value } }) => setSelectedHeight(value)}
           />
         </label>
@@ -90,7 +91,8 @@ function Index() {
             name='largura'
             id='input-largura'
             defaultValue='5'
-            min='1'
+            min='5'
+            max='50'
             onChange={({ target: { value } }) => setSelectedWidth(value)}
           />
         </label>
@@ -111,8 +113,8 @@ function Index() {
           <div>{createPixelBoard(selectedHeight, selectedWidth)}</div>
         )}
       </div>
-    </div>
+    </main>
   );
 }
 
-export default Index;
+export default PixelsArt;
