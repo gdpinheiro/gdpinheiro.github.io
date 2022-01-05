@@ -1,34 +1,38 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import '../style.css';
+import { TodoContext } from '../context/TodoContext';
 
 function ListItem(props) {
-  const [isTheItemSelected, setIsTheItemSelected] = useState(false);
-  const [isTheItemCompleted, setIsTheItemCompleted] = useState(false);
+  const [currentTask, setCurrentTask] = useState({});
 
-  const { children } = props;
+  const { taskList, selectTask, completeTask } = useContext(TodoContext);
 
-  // Select Task
-  function selectTask(task) {
-    setIsTheItemSelected(!isTheItemSelected);
-  }
+  const { children, id } = props;
 
-  // Complete Task
-  function completeTask(task) {
-    setIsTheItemCompleted(!isTheItemCompleted);
-  }
+  useEffect(() => {
+    return () => {
+      taskList.map((task) => {
+        if (task.id === id) {
+          setCurrentTask(task);
+        }
+        return task;
+      });
+    };
+  }, [id, taskList]);
 
   const listItemClass = classNames({
     listItem: true,
-    selected: isTheItemSelected,
-    completed: isTheItemCompleted,
+    selected: currentTask.isSelected,
+    completed: currentTask.isCompleted,
   });
 
   return (
     <li
       className={listItemClass}
-      onClick={selectTask}
-      onDoubleClick={completeTask}
+      onClick={({ target }) => selectTask(target)}
+      onDoubleClick={({ target }) => completeTask(target)}
+      id={id}
     >
       {children}
     </li>
