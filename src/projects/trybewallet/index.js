@@ -6,8 +6,8 @@ import Wallet from './pages/Wallet';
 function index() {
   return (
     <Routes>
-      <Route exact path='/carteira' component={Wallet} />
-      <Route exact path='/' component={Login} />
+      <Route path='/carteira' component={Wallet} />
+      <Route path='/' component={Login} />
     </Routes>
   );
 }

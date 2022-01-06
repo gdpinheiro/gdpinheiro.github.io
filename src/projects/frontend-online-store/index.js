@@ -1,21 +1,19 @@
 import React from 'react';
-import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Cart from './pages/ShoppingCart';
 import ProductDetail from './pages/ProductDetail';
 import Checkout from './pages/Checkout';
 
-function App() {
+function FrontendOnlineStore() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/shoppingCart' component={Cart} />
-        <Route exact path='/product/:id' component={ProductDetail} />
-        <Route exat path='/Checkout' component={Checkout} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path='/' component={Home} />
+      <Route path='/shoppingCart' component={Cart} />
+      <Route path='/product/:id' component={ProductDetail} />
+      <Route path='/Checkout' component={Checkout} />
+    </Routes>
   );
 }
 
-export default App;
+export default FrontendOnlineStore;

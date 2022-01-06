@@ -11,10 +11,10 @@ function FilterByNameInput() {
   return (
     <div>
       <input
-        type="text"
-        placeholder="Filter by Name..."
-        data-testid="name-filter"
-        onChange={ handleNameFilterInput }
+        type='text'
+        placeholder='Filter by Name...'
+        data-testid='name-filter'
+        onChange={handleNameFilterInput}
       />
     </div>
   );

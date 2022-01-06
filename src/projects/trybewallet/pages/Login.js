@@ -1,88 +1,75 @@
-// import React from 'react';
-// import { connect } from 'react-redux';
-// import PropTypes from 'prop-types';
-// import { saveEmail } from '../actions';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { saveEmail } from '../actions';
 
-// class Login extends React.Component {
-//   constructor() {
-//     super();
-//     this.state = {
-//       email: '',
-//       password: '',
-//       emailIsValid: false,
-//       passwordIsValid: false,
-//     };
-//     this.handleChange = this.handleChange.bind(this);
-//     this.login = this.login.bind(this);
-//   }
+function Login(props) {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [emailIsValid, setEmailIsValid] = useState(false);
+  const [passwordIsValid, setPasswordIsValid] = useState(false);
 
-//   handleChange({ target }) {
-//     this.setState({
-//       [target.name]: target.value,
-//     });
-//     this.verifyEmail();
-//     this.verifyPassword();
-//   }
+  const handleChange = ({ target }) => {
+    // setState({
+    //   [target.name]: target.value,
+    // });
+    // verifyEmail();
+    // verifyPassword();
+  };
 
-//   verifyEmail() {
-//     const { email } = this.state;
-//     const regex = /\w*@\w*\.\w/;
-//     return this.setState({ emailIsValid: regex.test(email) });
-//   }
+  const verifyEmail = () => {
+    // const regex = /\w*@\w*\.\w/;
+    // return setState({ emailIsValid: regex.test(email) });
+  };
 
-//   verifyPassword() {
-//     const { password } = this.state;
-//     const MAX_PASSWORD_LENGTH = 4;
-//     return this.setState({
-//       passwordIsValid: password.length > MAX_PASSWORD_LENGTH,
-//     });
-//   }
+  const verifyPassword = () => {
+    // const MAX_PASSWORD_LENGTH = 4;
+    // return setState({
+    //   passwordIsValid: password.length > MAX_PASSWORD_LENGTH,
+    // });
+  };
 
-//   login() {
-//     const { history, saveUserEmail } = this.props;
-//     const { email } = this.state;
-//     history.push('/carteira');
-//     saveUserEmail(email);
-//   }
+  const login = () => {
+    const { history, saveUserEmail } = props;
+    history.push('/carteira');
+    saveUserEmail(email);
+  };
 
-//   render() {
-//     const { emailIsValid, passwordIsValid } = this.state;
-//     const loginButton = emailIsValid && passwordIsValid ? (
-//       <button type="button" onClick={ this.login }>
-//         Entrar
-//       </button>
-//     ) : (
-//       <button type="button" disabled>
-//         Entrar
-//       </button>
-//     );
-//     return (
-//       <div>
-//         <input
-//           type="text"
-//           data-testid="email-input"
-//           name="email"
-//           onChange={ this.handleChange }
-//         />
-//         <input
-//           type="text"
-//           data-testid="password-input"
-//           name="password"
-//           onChange={ this.handleChange }
-//         />
-//         {loginButton}
-//       </div>
-//     );
-//   }
-// }
+  const loginButton =
+    emailIsValid && passwordIsValid ? (
+      <button type='button' onClick={login}>
+        Entrar
+      </button>
+    ) : (
+      <button type='button' disabled>
+        Entrar
+      </button>
+    );
+  return (
+    <div>
+      <input
+        type='text'
+        data-testid='email-input'
+        name='email'
+        onChange={handleChange}
+      />
+      <input
+        type='text'
+        data-testid='password-input'
+        name='password'
+        onChange={handleChange}
+      />
+      {loginButton}
+    </div>
+  );
+}
 
-// const mapDispatchToProps = (dispatch) => ({
-//   saveUserEmail: (email) => dispatch(saveEmail(email)),
-// });
+const mapDispatchToProps = (dispatch) => ({
+  saveUserEmail: (email) => dispatch(saveEmail(email)),
+});
 
-// export default connect(null, mapDispatchToProps)(Login);
+export default Login;
 
-// Login.propTypes = {
-//   history: PropTypes.objectOf(PropTypes.any).isRequired,
-//   saveUserEmail: PropTypes.func.isRequired,
-// };
+Login.propTypes = {
+  history: PropTypes.objectOf(PropTypes.any).isRequired,
+  saveUserEmail: PropTypes.func.isRequired,
+};

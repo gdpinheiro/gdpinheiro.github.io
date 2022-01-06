@@ -10,6 +10,4 @@ function saveToStorage(product) {
   localStorage.setItem('cart', JSON.stringify(storageCart));
 }
 
-export default function (product) {
-  saveToStorage(product);
-}
+export default saveToStorage;

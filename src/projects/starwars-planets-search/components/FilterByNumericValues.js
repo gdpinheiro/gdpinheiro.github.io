@@ -7,7 +7,8 @@ function FilterByNumericValues() {
   const [valueFilter, setValueFilter] = useState(0);
   const [currentFilters, setCurrentFilters] = useState([]);
 
-  const { filterByNumericValues, setFilterByNumericValues } = useContext(ApiDataContext);
+  const { filterByNumericValues, setFilterByNumericValues } =
+    useContext(ApiDataContext);
 
   const submitNumericFilter = () => {
     setFilterByNumericValues([
@@ -57,7 +58,7 @@ function FilterByNumericValues() {
     });
 
     return filteredColumns.map((column) => (
-      <option key={ column } value={ column }>
+      <option key={column} value={column}>
         {column}
       </option>
     ));
@@ -65,24 +66,24 @@ function FilterByNumericValues() {
 
   return (
     <div>
-      <select data-testid="column-filter" onChange={ handleColumnFilter }>
+      <select data-testid='column-filter' onChange={handleColumnFilter}>
         {generateColumnOptions()}
       </select>
-      <select data-testid="comparison-filter" onChange={ handleComparisonFilter }>
-        <option value="maior que">maior que</option>
-        <option value="menor que">menor que</option>
-        <option value="igual a">igual a</option>
+      <select data-testid='comparison-filter' onChange={handleComparisonFilter}>
+        <option value='maior que'>maior que</option>
+        <option value='menor que'>menor que</option>
+        <option value='igual a'>igual a</option>
       </select>
       <input
-        type="number"
-        data-testid="value-filter"
-        value={ valueFilter }
-        onChange={ handleValueFilter }
+        type='number'
+        data-testid='value-filter'
+        value={valueFilter}
+        onChange={handleValueFilter}
       />
       <button
-        type="button"
-        onClick={ submitNumericFilter }
-        data-testid="button-filter"
+        type='button'
+        onClick={submitNumericFilter}
+        data-testid='button-filter'
       >
         Filter
       </button>
@@ -91,13 +92,9 @@ function FilterByNumericValues() {
           <h3>Current Filters</h3>
           <ul>
             {currentFilters.map((filter) => (
-              <li key={ filter.column }>
-                {filter.column}
-                {' '}
-                {filter.comparison}
-                {' '}
-                {filter.value}
-                <button type="button">X</button>
+              <li key={filter.column}>
+                {filter.column} {filter.comparison} {filter.value}
+                <button type='button'>X</button>
               </li>
             ))}
           </ul>

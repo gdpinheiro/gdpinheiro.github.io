@@ -2,9 +2,8 @@ import React, { useContext, useEffect } from 'react';
 import { ApiDataContext } from '../context/ApiDataContext';
 
 function Table() {
-  const {
-    data, fetchAPI, nameFilter, filterByNumericValues,
-  } = useContext(ApiDataContext);
+  const { data, fetchAPI, nameFilter, filterByNumericValues } =
+    useContext(ApiDataContext);
 
   useEffect(() => {
     fetchAPI();
@@ -18,20 +17,21 @@ function Table() {
     return true;
   };
 
-  const handleNumericFilter = (item) => filterByNumericValues.every((filter) => {
-    const { column, comparison, value } = filter;
-    const number = parseInt(item[column], 10);
-    switch (comparison) {
-    case 'maior que':
-      return number > value;
-    case 'menor que':
-      return number < value;
-    case 'igual a':
-      return number === value;
-    default:
-      return true;
-    }
-  });
+  const handleNumericFilter = (item) =>
+    filterByNumericValues.every((filter) => {
+      const { column, comparison, value } = filter;
+      const number = parseInt(item[column], 10);
+      switch (comparison) {
+        case 'maior que':
+          return number > value;
+        case 'menor que':
+          return number < value;
+        case 'igual a':
+          return number === value;
+        default:
+          return true;
+      }
+    });
 
   return (
     <div>
@@ -43,7 +43,7 @@ function Table() {
                 if (key === 'residents') {
                   return null;
                 }
-                return <th key={ index }>{key}</th>;
+                return <th key={index}>{key}</th>;
               })}
             </tr>
           </thead>
@@ -53,13 +53,13 @@ function Table() {
                 return null;
               }
               return (
-                <tr key={ index }>
+                <tr key={index}>
                   {Object.keys(item).map((key, itemIndex) => {
                     if (key === 'residents') {
                       return null;
                     }
                     return (
-                      <td key={ `${item.name}${itemIndex}` }>{item[key]}</td>
+                      <td key={`${item.name}${itemIndex}`}>{item[key]}</td>
                     );
                   })}
                 </tr>

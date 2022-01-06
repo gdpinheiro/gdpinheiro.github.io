@@ -9,10 +9,10 @@ import Feedback from './pages/Feedback';
 function index() {
   return (
     <Routes>
-      <Route exact path='/' component={Login} />
-      <Route exact path='/settings' component={Settings} />
-      <Route exact path='/game' component={Game} />
-      <Route exact path='/feedback' component={Feedback} />
+      <Route path='/' component={Login} />
+      <Route path='/settings' component={Settings} />
+      <Route path='/game' component={Game} />
+      <Route path='/feedback' component={Feedback} />
     </Routes>
   );
 }
