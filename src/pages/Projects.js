@@ -13,115 +13,183 @@ function Projects() {
         <div>
           <h3>Lessons Learned</h3>
           <Link to='/projects/lessons-learned'>Live Page</Link>
-          <a href='https://github.com/tryber/sd-015-a-project-lessons-learned/pull/76'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://github.com/tryber/sd-015-a-project-lessons-learned/pull/76'
+          >
             Pull Request
           </a>
         </div>
         <div>
           <h3>Playground Functions</h3>
-          <a href='https://github.com/tryber/sd-015-a-project-playground-functions/pull/12'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://github.com/tryber/sd-015-a-project-playground-functions/pull/12'
+          >
             Pull Request
           </a>
         </div>
         <div>
           <h3>Pixels Art</h3>
           <Link to='/projects/pixels-art'>Live Page</Link>
-          <a href='https://github.com/tryber/sd-015-a-project-pixels-art/pull/19'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://github.com/tryber/sd-015-a-project-pixels-art/pull/19'
+          >
             Pull Request
           </a>
         </div>
         <div>
           <h3>Todo List</h3>
           <Link to='/projects/todo-list'>Live Page</Link>
-          <a href='https://github.com/tryber/sd-015-a-project-todo-list/pull/90'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://github.com/tryber/sd-015-a-project-todo-list/pull/90'
+          >
             Pull Request
           </a>
         </div>
         <div>
           <h3>Trybewarts</h3>
           <Link to='/projects/trybewarts'>Live Page</Link>
-          <a href='https://github.com/tryber/sd-015-a-project-trybewarts/pull/102'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://github.com/tryber/sd-015-a-project-trybewarts/pull/102'
+          >
             Pull Request
           </a>
         </div>
         <div>
           <h3>JS Unit Tests</h3>
-          <a href='https://github.com/tryber/sd-015-a-project-js-unit-tests/pull/56'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://github.com/tryber/sd-015-a-project-js-unit-tests/pull/56'
+          >
             Pull Request
           </a>
         </div>
         <div>
           <h3>Zoo Functions</h3>
-          <a href='https://github.com/tryber/sd-015-a-project-zoo-functions/pull/63'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://github.com/tryber/sd-015-a-project-zoo-functions/pull/63'
+          >
             Pull Request
           </a>
         </div>
         <div>
           <h3>Shopping Cart</h3>
           <Link to='/projects/shopping-cart'>Live Page</Link>
-          <a href='https://github.com/tryber/sd-015-a-project-shopping-cart/pull/19'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://github.com/tryber/sd-015-a-project-shopping-cart/pull/19'
+          >
             Pull Request
           </a>
         </div>
         <div>
           <h3> Movie Cards Library</h3>
           <Link to='/projects/movie-cards-library'>Live Page</Link>
-          <a href='https://github.com/tryber/sd-015-a-project-movie-cards-library/pull/66'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://github.com/tryber/sd-015-a-project-movie-cards-library/pull/66'
+          >
             Pull Request
           </a>
         </div>
         <div>
           <h3>Tryunfo</h3>
           <Link to='/projects/tryunfo'>Live Page</Link>
-          <a href='https://github.com/tryber/sd-015-a-project-tryunfo/pull/76'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://github.com/tryber/sd-015-a-project-tryunfo/pull/76'
+          >
             Pull Request
           </a>
         </div>
         <div>
           <h3>Trybetunes</h3>
           <Link to='/projects/trybetunes'>Live Page</Link>
-          <a href='https://github.com/tryber/sd-015-a-project-trybetunes/pull/52'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://github.com/tryber/sd-015-a-project-trybetunes/pull/52'
+          >
             Pull Request
           </a>
         </div>
         <div>
           <h3>Front-End Online Store</h3>
           <Link to='/projects/front-end-online-store'>Live Page</Link>
-          <a href='https://github.com/tryber/sd-015-a-project-frontend-online-store/pull/25'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://github.com/tryber/sd-015-a-project-frontend-online-store/pull/25'
+          >
             Pull Request
           </a>
         </div>
         <div>
           <h3>React Testing Library</h3>
-          <a href='https://github.com/tryber/sd-015-a-project-react-testing-library/pull/57'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://github.com/tryber/sd-015-a-project-react-testing-library/pull/57'
+          >
             Pull Request
           </a>
         </div>
         <div>
           <h3>Trybe Wallet</h3>
           <Link to='/projects/trybe-wallet'>Live Page</Link>
-          <a href='https://github.com/tryber/sd-015-a-project-trybewallet/pull/21'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://github.com/tryber/sd-015-a-project-trybewallet/pull/21'
+          >
             Pull Request
           </a>
         </div>
         <div>
           <h3>Trivia</h3>
           <Link to='/projects/trivia'>Live Page</Link>
-          <a href='https://github.com/tryber/sd-015-a-project-trivia-react-redux/pull/14'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://github.com/tryber/sd-015-a-project-trivia-react-redux/pull/14'
+          >
             Pull Request
           </a>
         </div>
         <div>
           <h3>Star Wars Planets Search</h3>
           <Link to='/projects/star-wars-planets-search'>Live Page</Link>
-          <a href='https://github.com/tryber/sd-015-a-project-starwars-planets-search/pull/45'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://github.com/tryber/sd-015-a-project-starwars-planets-search/pull/45'
+          >
             Pull Request
           </a>
         </div>
         <div>
           <h3>Recipes APP</h3>
           <Link to='/projects/recipes-app'>Live Page</Link>
-          <a href='https://github.com/tryber/sd-015-a-project-recipes-app/pull/228'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://github.com/tryber/sd-015-a-project-recipes-app/pull/228'
+          >
             Pull Request
           </a>
         </div>
