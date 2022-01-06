@@ -1,4 +1,5 @@
 import React, { createContext, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 export const TodoContext = createContext();
 
@@ -11,7 +12,7 @@ const TodoContextProvider = ({ children }) => {
       ...taskList,
       {
         task: taskInput,
-        id: `task-${taskList.length}`,
+        id: uuidv4(),
         isCompleted: false,
         isSelected: false,
       },
@@ -23,10 +24,10 @@ const TodoContextProvider = ({ children }) => {
     setTaskList([]);
   };
 
-  // Clean Selected
-  const cleanSelected = () => {
+  // Clean Completed
+  const cleanCompleted = () => {
     const filteredSelectedTasks = taskList.filter((task) => {
-      return !task.isSelected;
+      return !task.isCompleted;
     });
     setTaskList([]);
     setTaskList([...filteredSelectedTasks]);
@@ -64,7 +65,7 @@ const TodoContextProvider = ({ children }) => {
         taskList,
         createTask,
         cleanList,
-        cleanSelected,
+        cleanCompleted,
         selectTask,
         completeTask,
       }}

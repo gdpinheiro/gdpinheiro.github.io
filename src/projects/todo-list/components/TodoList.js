@@ -6,7 +6,7 @@ import { TodoContext } from '../context/TodoContext';
 function TodoList() {
   const [taskInput, setTaskInput] = useState('');
 
-  const { taskList, createTask, cleanList, cleanSelected } =
+  const { taskList, createTask, cleanList, cleanCompleted } =
     useContext(TodoContext);
 
   // Handle input change
@@ -31,8 +31,8 @@ function TodoList() {
         Criar Tarefa
       </button>
       <ol id='lista-tarefas'>
-        {taskList.map(({ task, isCompleted }, index) => (
-          <ListItem key={`task-${index}`} id={`task-${index}`}>
+        {taskList.map(({ task, id }, index) => (
+          <ListItem key={`task-${index}`} id={id}>
             {task}
           </ListItem>
         ))}
@@ -40,7 +40,7 @@ function TodoList() {
       <button id='apaga-tudo' onClick={cleanList}>
         Apagar Tudo
       </button>
-      <button id='remover-finalizados' onClick={cleanSelected}>
+      <button id='remover-finalizados' onClick={cleanCompleted}>
         Remover Finalizados
       </button>
     </main>
