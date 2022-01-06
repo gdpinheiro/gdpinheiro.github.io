@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
-import MovieList from './components/MovieList';
+import List from './components/List';
 
-function App() {
+function MovieList() {
   return (
     <div className='App'>
       <Header />
-      <MovieList />
+      <List />
     </div>
   );
 }
 
-export default App;
+export default MovieList;

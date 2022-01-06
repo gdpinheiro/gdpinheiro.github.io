@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import MovieCard from './MovieCard';
 import data from '../data';
 
-function MovieList() {
+function List() {
   return (
     <div className='movie-list'>
       {data.map((elem) => (
@@ -13,8 +13,8 @@ function MovieList() {
   );
 }
 
-MovieList.propTypes = PropTypes.shape({
+List.propTypes = PropTypes.shape({
   movies: PropTypes.arrayOf(PropTypes.object).isRequired,
 }).isRequired;
 
-export default MovieList;
+export default List;
