@@ -6,7 +6,7 @@ import Settings from './pages/Settings';
 import Game from './pages/Game';
 import Feedback from './pages/Feedback';
 
-function index() {
+function Trivia() {
   return (
     <Routes>
       <Route path='/' component={Login} />
@@ -17,4 +17,4 @@ function index() {
   );
 }
 
-export default index;
+export default Trivia;

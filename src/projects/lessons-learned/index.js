@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-function index() {
+function LessonsLearned() {
   return (
     <div>
       <header id='cabecalho'>
@@ -84,4 +84,4 @@ function index() {
   );
 }
 
-export default index;
+export default LessonsLearned;

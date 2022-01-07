@@ -1,14 +1,14 @@
 import React from 'react';
 import './style.css';
-import TodoList from './components/TodoList';
+import List from './components/List';
 import TodoContextProvider from './context/TodoContext';
 
-function TodoListIndex() {
+function TodoList() {
   return (
     <TodoContextProvider>
-      <TodoList />
+      <List />
     </TodoContextProvider>
   );
 }
 
-export default TodoListIndex;
+export default TodoList;

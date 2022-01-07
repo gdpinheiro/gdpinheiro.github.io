@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import '../style.css';
-import ListItem from '../components/ListItem';
+import ListItem from './ListItem';
 import { TodoContext } from '../context/TodoContext';
 
-function TodoList() {
+function List() {
   const [taskInput, setTaskInput] = useState('');
 
   const { taskList, createTask, cleanList, cleanCompleted } =
@@ -47,4 +47,4 @@ function TodoList() {
   );
 }
 
-export default TodoList;
+export default List;
