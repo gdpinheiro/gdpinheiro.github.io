@@ -25,15 +25,12 @@ function Home() {
       />
       <div className='search-container'>
         <div className='text-cart'>
-          <h3 data-testid='home-initial-message'>
-            Digite algum termo de pesquisa ou escolha uma categoria.
-          </h3>
+          <h3>Digite algum termo de pesquisa ou escolha uma categoria.</h3>
           <Link
             to={{
               pathname: '/ShoppingCart',
               state: { cartItems },
             }}
-            data-testid='shopping-cart-button'
           >
             <i className='fas fa-shopping-cart' />
           </Link>

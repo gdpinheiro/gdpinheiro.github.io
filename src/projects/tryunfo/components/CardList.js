@@ -16,11 +16,7 @@ function CardList(props) {
         cardRare={elem.cardRare}
         cardTrunfo={elem.cardTrunfo}
       />
-      <button
-        type='button'
-        data-testid='delete-button'
-        onClick={onDeleteButtonClick}
-      >
+      <button type='button' onClick={onDeleteButtonClick}>
         Excluir
       </button>
     </div>

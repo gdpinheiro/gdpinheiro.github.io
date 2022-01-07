@@ -26,12 +26,9 @@ function Header() {
       <img
         src={`https://www.gravatar.com/avatar/${emailMD5}`}
         alt='Imagem de perfil'
-        data-testid='header-profile-picture'
       />
-      <p className='header__identification' data-testid='header-player-name'>
-        Usuário: {name}
-      </p>
-      <h3 data-testid='header-score'>{score}</h3>
+      <p className='header__identification'>Usuário: {name}</p>
+      <h3>{score}</h3>
     </div>
   );
 }

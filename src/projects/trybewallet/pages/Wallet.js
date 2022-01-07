@@ -48,7 +48,7 @@ function Wallet(props) {
   const currencyEntries = () => {
     const { currencies } = props;
     return Object.entries(currencies).map((elem) => (
-      <option key={elem[0]} value={elem[0]} data-testid={elem[0]}>
+      <option key={elem[0]} value={elem[0]}>
         {elem[0]}
       </option>
     ));
@@ -56,7 +56,7 @@ function Wallet(props) {
 
   const tagInput = () => {
     return (
-      <select name='tag' data-testid='tag-input' onChange={handleChange}>
+      <select name='tag' onChange={handleChange}>
         <option value='Alimentação'>Alimentação</option>
         <option value='Lazer'>Lazer</option>
         <option value='Trabalho'>Trabalho</option>
@@ -68,7 +68,7 @@ function Wallet(props) {
 
   const methodInput = () => {
     return (
-      <select name='method' data-testid='method-input' onChange={handleChange}>
+      <select name='method' onChange={handleChange}>
         <option value='Dinheiro'>Dinheiro</option>
         <option value='Cartão de crédito'>Cartão de crédito</option>
         <option value='Cartão de débito'>Cartão de débito</option>
@@ -124,36 +124,20 @@ function Wallet(props) {
   return (
     <div>
       <header>
-        <p data-testid='email-field'>{email}</p>
-        <span data-testid='total-field'>{totalDispenses}</span>
-        <span data-testid='header-currency-field'> BRL</span>
+        <p>{email}</p>
+        <span>{totalDispenses}</span>
+        <span> BRL</span>
       </header>
-      <input
-        type='text'
-        data-testid='value-input'
-        name='value'
-        value={value}
-        onChange={handleChange}
-      />
+      <input type='text' name='value' value={value} onChange={handleChange} />
       <label htmlFor='moeda'>
         Moeda:
-        <select
-          name='moeda'
-          id='moeda'
-          data-testid='currency-input'
-          onChange={handleChange}
-        >
+        <select name='moeda' id='moeda' onChange={handleChange}>
           {currencyEntries()}
         </select>
       </label>
       {methodInput()}
       {tagInput()}
-      <input
-        type='text'
-        data-testid='description-input'
-        name='description'
-        onChange={handleChange}
-      />
+      <input type='text' name='description' onChange={handleChange} />
       <button type='button' onClick={saveExpense}>
         Adicionar despesa
       </button>

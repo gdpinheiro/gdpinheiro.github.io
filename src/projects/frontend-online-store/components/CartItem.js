@@ -7,20 +7,12 @@ function CartItem() {
   const { item, updateCartState } = this.props;
   return (
     <li key={item.id}>
-      <p data-testid='shopping-cart-product-name'>{item.title}</p>
-      <button
-        data-testid='product-decrease-quantity'
-        type='button'
-        onClick={() => updateCartState(rmFromCart, item)}
-      >
+      <p>{item.title}</p>
+      <button type='button' onClick={() => updateCartState(rmFromCart, item)}>
         -
       </button>
-      <p data-testid='shopping-cart-product-quantity'>{item.quantity}</p>
-      <button
-        data-testid='product-increase-quantity'
-        type='button'
-        onClick={() => updateCartState(addToCart, item)}
-      >
+      <p>{item.quantity}</p>
+      <button type='button' onClick={() => updateCartState(addToCart, item)}>
         +
       </button>
       <img src={item.thumbnail} alt='' />

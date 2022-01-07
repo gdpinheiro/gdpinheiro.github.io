@@ -32,21 +32,15 @@ function Search(props) {
             product: elem,
           },
         }}
-        data-testid='product-detail-link'
       >
-        <li key={elem.id} data-testid='product'>
+        <li key={elem.id}>
           <h5 className='product-title'>{elem.title}</h5>
           <img src={elem.thumbnail} alt='' className='product-img' />
           <p className='product-price'>R$ {elem.price}</p>
         </li>
       </Link>
       {/* https://stackoverflow.com/questions/29810914/react-js-onclick-cant-pass-value-to-method  */}
-      <button
-        type='button'
-        data-testid='product-add-to-cart'
-        onClick={() => addToCart(elem)}
-        className='btn'
-      >
+      <button type='button' onClick={() => addToCart(elem)} className='btn'>
         Adicionar ao Carrinho
       </button>
     </div>
@@ -58,21 +52,15 @@ function Search(props) {
         <input
           type='text'
           onChange={this.setSearchQuery}
-          data-testid='query-input'
           className='search-input'
         />
-        <button
-          type='button'
-          onClick={this.searchButton}
-          data-testid='query-button'
-          className='btn'
-        >
+        <button type='button' onClick={this.searchButton} className='btn'>
           Buscar
         </button>
       </div>
       <div>
         {searchResults.length === 0 ? (
-          <span data-testid='product'>Nenhum produto foi encontrado</span>
+          <span>Nenhum produto foi encontrado</span>
         ) : (
           <ul className='search-results'>{productCards}</ul>
         )}

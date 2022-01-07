@@ -36,18 +36,8 @@ function Search() {
 
   const inputAndButton = (
     <div>
-      <input
-        type='text'
-        data-testid='search-artist-input'
-        onChange={this.searchInput}
-        value={input}
-      />
-      <button
-        type='button'
-        data-testid='search-artist-button'
-        onClick={this.btnSend}
-        disabled={btnDisabled}
-      >
+      <input type='text' onChange={this.searchInput} value={input} />
+      <button type='button' onClick={this.btnSend} disabled={btnDisabled}>
         Pesquisar
       </button>
     </div>
@@ -58,11 +48,7 @@ function Search() {
       <h3>Resultado de álbuns de: {query}</h3>
       <ul>
         {searchResults.map((elem) => (
-          <Link
-            to={`/album/${elem.collectionId}`}
-            data-testid={`link-to-album-${elem.collectionId}`}
-            key={elem.collectionId}
-          >
+          <Link to={`/album/${elem.collectionId}`} key={elem.collectionId}>
             <li>
               <img src={elem.artworkUrl100} alt='' />
               <h3>{elem.artistName}</h3>
@@ -79,7 +65,7 @@ function Search() {
   }
 
   return (
-    <div data-testid='page-search'>
+    <div>
       <Header page='/search' />
       {isLoading && <Loading isLoading={isLoading} targetRoute='/search' />}
       <h1>Search</h1>

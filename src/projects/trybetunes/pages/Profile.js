@@ -3,7 +3,7 @@ import Header from '../components/Header';
 
 function Profile() {
   return (
-    <div data-testid='page-profile'>
+    <div>
       <h1>Profile</h1>
       <Header page='/profile' />
     </div>

@@ -7,26 +7,23 @@ class Feedback extends Component {
     const getAssertions = JSON.parse(localStorage.getItem('state')).player
       .assertions;
     const minAssertions = 3;
-    const result = getAssertions < minAssertions ? (
-      <h1 data-testid="feedback-text">Podia ser melhor...</h1>
-    ) : (
-      <h1 data-testid="feedback-text">Mandou bem!</h1>
-    );
+    const result =
+      getAssertions < minAssertions ? (
+        <h1>Podia ser melhor...</h1>
+      ) : (
+        <h1>Mandou bem!</h1>
+      );
     return result;
   }
 
   finalScore() {
     const { assertions, score } = JSON.parse(
-      localStorage.getItem('state'),
+      localStorage.getItem('state')
     ).player;
     return (
       <div>
-        <h1 data-testid="feedback-total-score">
-          {score}
-        </h1>
-        <h1 data-testid="feedback-total-question">
-          {assertions}
-        </h1>
+        <h1>{score}</h1>
+        <h1>{assertions}</h1>
       </div>
     );
   }
@@ -36,14 +33,10 @@ class Feedback extends Component {
     return (
       <div>
         <Header />
-        <h1 data-testid="feedback-text">Feedback</h1>
+        <h1>Feedback</h1>
         {this.checkAssertions()}
         {this.finalScore()}
-        <button
-          type="button"
-          data-testid="btn-play-again"
-          onClick={ () => history.push('/') }
-        >
+        <button type='button' onClick={() => history.push('/')}>
           Jogar novamente
         </button>
       </div>

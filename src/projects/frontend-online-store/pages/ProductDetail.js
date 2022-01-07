@@ -69,21 +69,17 @@ function ProductDetail(props) {
 
   return (
     <div>
-      <Link data-testid='shopping-cart-button' to='/ShoppingCart'>
+      <Link to='/ShoppingCart'>
         <i className='fas fa-shopping-cart' />
       </Link>
       <div>
-        <h3 data-testid='product-detail-name'>{product.title} </h3>
+        <h3>{product.title} </h3>
         <img src={product.thumbnail} alt='' />
         <p>R$ {product.price}</p>
       </div>
       <ul>{attributes.map((elem) => this.attributeFilter(elem))}</ul>
       <div>
-        <button
-          type='button'
-          onClick={() => addToCart(product)}
-          data-testid='product-detail-add-to-cart'
-        >
+        <button type='button' onClick={() => addToCart(product)}>
           Adicionar ao Carrinho
         </button>
       </div>

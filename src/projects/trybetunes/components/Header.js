@@ -26,18 +26,12 @@ function Header(props) {
   };
 
   return (
-    <header data-testid='header-component'>
+    <header>
       <h1>Header</h1>
-      <Link to='/search' data-testid='link-to-search'>
-        Search
-      </Link>
-      <Link to='/favorites' data-testid='link-to-favorites'>
-        Favorites
-      </Link>
-      <Link to='/profile' data-testid='link-to-profile'>
-        Profile
-      </Link>
-      <p data-testid='header-user-name'>{username}</p>
+      <Link to='/search'>Search</Link>
+      <Link to='/favorites'>Favorites</Link>
+      <Link to='/profile'>Profile</Link>
+      <p>{username}</p>
       {isLoading && <Loading isLoading={isLoading} targetRoute={page} />}
     </header>
   );

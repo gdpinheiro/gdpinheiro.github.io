@@ -13,7 +13,6 @@ function FilterByNameInput() {
       <input
         type='text'
         placeholder='Filter by Name...'
-        data-testid='name-filter'
         onChange={handleNameFilterInput}
       />
     </div>

@@ -34,7 +34,6 @@ function Categories() {
             type='button'
             id={category.id}
             onClick={this.handleCategory}
-            data-testid='category'
             className='btn'
           >
             {category.name}

@@ -7,39 +7,28 @@ function Login() {
   const [name, setName] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const loginInput = ({ target }) => {
-    const { value } = target;
-    this.setState({ name: value }, this.btnDisabled);
+  const loginInput = ({ target: { value } }) => {
+    setName(value);
   };
 
   const btnDisabledFunc = () => {
-    const { name } = this.state;
     const minLength = 3;
     if (name.length >= minLength) {
-      return this.setState({ btnDisabled: false });
+      return setBtnDisabled(false);
     }
-    return this.setState({ btnDisabled: true });
+    return setBtnDisabled(true);
   };
 
   const btnSend = () => {
-    const { name } = this.state;
-    this.setState({ isLoading: true }, () => createUser({ name }));
+    setIsLoading(true);
+    createUser(name);
   };
 
   return (
-    <div data-testid='page-login'>
+    <div>
       <h1>Login</h1>
-      <input
-        type='text'
-        data-testid='login-name-input'
-        onChange={this.loginInput}
-      />
-      <button
-        type='button'
-        data-testid='login-submit-button'
-        onClick={this.btnSend}
-        disabled={btnDisabled}
-      >
+      <input type='text' onChange={loginInput} />
+      <button type='button' onClick={btnSend} disabled={btnDisabled}>
         Entrar
       </button>
       {isLoading && <Loading isLoading={isLoading} targetRoute='/search' />}

@@ -12,7 +12,6 @@ function MusicCard(props) {
       type='checkbox'
       name='favoriteCheckbox'
       id='favoriteCheckbox'
-      data-testid={`checkbox-music-${trackId}`}
       onChange={() => {
         this.setState({ isLoading: true });
         addSong(fullObj).then(() => this.setState({ isLoading: false }));
@@ -26,7 +25,6 @@ function MusicCard(props) {
         type='checkbox'
         name='favoriteCheckbox'
         id='favoriteCheckbox'
-        data-testid={`checkbox-music-${trackId}`}
         checked
         onChange={() => {
           this.setState({ isLoading: true });
@@ -45,7 +43,7 @@ function MusicCard(props) {
           Favorita
         </label>
       </div>
-      <audio data-testid='audio-component' src={previewUrl} controls>
+      <audio src={previewUrl} controls>
         <track kind='captions' />O seu navegador não suporta o elemento{' '}
         <code>audio</code>
       </audio>

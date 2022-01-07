@@ -41,7 +41,6 @@ function ReviewForm(props) {
             cols='30'
             rows='5'
             onChange={this.setReviewState}
-            data-testid='product-detail-evaluation'
           />
         </div>
         <div>

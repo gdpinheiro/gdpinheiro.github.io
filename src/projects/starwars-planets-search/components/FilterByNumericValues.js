@@ -66,25 +66,14 @@ function FilterByNumericValues() {
 
   return (
     <div>
-      <select data-testid='column-filter' onChange={handleColumnFilter}>
-        {generateColumnOptions()}
-      </select>
-      <select data-testid='comparison-filter' onChange={handleComparisonFilter}>
+      <select onChange={handleColumnFilter}>{generateColumnOptions()}</select>
+      <select onChange={handleComparisonFilter}>
         <option value='maior que'>maior que</option>
         <option value='menor que'>menor que</option>
         <option value='igual a'>igual a</option>
       </select>
-      <input
-        type='number'
-        data-testid='value-filter'
-        value={valueFilter}
-        onChange={handleValueFilter}
-      />
-      <button
-        type='button'
-        onClick={submitNumericFilter}
-        data-testid='button-filter'
-      >
+      <input type='number' value={valueFilter} onChange={handleValueFilter} />
+      <button type='button' onClick={submitNumericFilter}>
         Filter
       </button>
       {currentFilters.length > 0 && (

@@ -52,7 +52,6 @@ function Form(props) {
           Descrição
           <textarea
             name='cardDescription'
-            data-testid='description-input'
             value={cardDescription}
             onChange={onInputChange}
           />
@@ -101,12 +100,7 @@ function Form(props) {
       <div>
         <label htmlFor='raridade'>
           Raridade
-          <select
-            name='cardRare'
-            data-testid='rare-input'
-            value={cardRare}
-            onChange={onInputChange}
-          >
+          <select name='cardRare' value={cardRare} onChange={onInputChange}>
             <option value='normal'>Normal</option>
             <option value='raro'>Raro</option>
             <option value='muito raro'>Muito Raro</option>
@@ -117,7 +111,6 @@ function Form(props) {
       <div>
         <button
           type='submit'
-          data-testid='save-button'
           disabled={isSaveButtonDisabled}
           onClick={onSaveButtonClick}
         >

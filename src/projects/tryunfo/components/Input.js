@@ -8,13 +8,7 @@ function Input(props) {
     return (
       <div>
         <label htmlFor={name}>
-          <input
-            name={name}
-            type={type}
-            data-testid={testid}
-            checked={value}
-            onChange={onChange}
-          />
+          <input name={name} type={type} checked={value} onChange={onChange} />
         </label>
       </div>
     );
@@ -23,13 +17,7 @@ function Input(props) {
   return (
     <div>
       <label htmlFor={name}>
-        <input
-          name={name}
-          type={type}
-          data-testid={testid}
-          value={value}
-          onChange={onChange}
-        />
+        <input name={name} type={type} value={value} onChange={onChange} />
       </label>
     </div>
   );

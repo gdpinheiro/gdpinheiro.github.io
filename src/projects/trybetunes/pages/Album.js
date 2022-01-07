@@ -56,12 +56,12 @@ function Album(props) {
     );
   });
 
-  const artistNameText = <h1 data-testid='artist-name'>{artistName}</h1>;
+  const artistNameText = <h1>{artistName}</h1>;
 
-  const collectionNameText = <h3 data-testid='album-name'>{collectionName}</h3>;
+  const collectionNameText = <h3>{collectionName}</h3>;
 
   return (
-    <div data-testid='page-album'>
+    <div>
       <Header page={location.pathname} />
       {artistNameText}
       {collectionNameText}

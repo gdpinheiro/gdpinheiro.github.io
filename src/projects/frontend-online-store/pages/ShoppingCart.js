@@ -35,9 +35,7 @@ function ShoppingCart() {
       <div>
         {isCartEmpty ? (
           <div>
-            <p data-testid='shopping-cart-empty-message'>
-              Seu carrinho está vazio{' '}
-            </p>
+            <p>Seu carrinho está vazio </p>
           </div>
         ) : (
           <div>
@@ -54,7 +52,6 @@ function ShoppingCart() {
               to={{
                 pathname: '/Checkout',
               }}
-              data-testid='checkout-products'
             >
               Finalizar Compra
             </Link>

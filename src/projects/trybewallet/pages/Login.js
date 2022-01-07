@@ -46,18 +46,8 @@ function Login(props) {
     );
   return (
     <div>
-      <input
-        type='text'
-        data-testid='email-input'
-        name='email'
-        onChange={handleChange}
-      />
-      <input
-        type='text'
-        data-testid='password-input'
-        name='password'
-        onChange={handleChange}
-      />
+      <input type='text' name='email' onChange={handleChange} />
+      <input type='text' name='password' onChange={handleChange} />
       {loginButton}
     </div>
   );
