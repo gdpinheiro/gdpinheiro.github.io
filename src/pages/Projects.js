@@ -130,7 +130,7 @@ function Projects() {
         </div>
         <div>
           <h3>Front-End Online Store</h3>
-          <Link to='/projects/front-end-online-store'>Live Page</Link>
+          <Link to='/projects/frontend-online-store'>Live Page</Link>
           <a
             target='_blank'
             rel='noopener noreferrer'
@@ -151,7 +151,7 @@ function Projects() {
         </div>
         <div>
           <h3>Trybe Wallet</h3>
-          <Link to='/projects/trybe-wallet'>Live Page</Link>
+          <Link to='/projects/trybewallet'>Live Page</Link>
           <a
             target='_blank'
             rel='noopener noreferrer'

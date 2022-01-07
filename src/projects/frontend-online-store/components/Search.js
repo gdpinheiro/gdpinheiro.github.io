@@ -9,16 +9,16 @@ function Search(props) {
   // searchQuery: undefined,
 
   const setSearchQuery = ({ target }) => {
-    const { value } = target;
-    this.setState({ searchQuery: value });
+    // const { value } = target;
+    // setState({ searchQuery: value });
   };
 
   const searchButton = () => {
-    const { searchQuery, categoryFilter } = this.state;
-    const { setSearchResults } = this.props;
-    getProductsFromCategoryAndQuery(categoryFilter, searchQuery).then((data) =>
-      setSearchResults(data)
-    );
+    // const { searchQuery, categoryFilter } = state;
+    // const { setSearchResults } = props;
+    // getProductsFromCategoryAndQuery(categoryFilter, searchQuery).then((data) =>
+    //   setSearchResults(data)
+    // );
   };
 
   const { searchResults } = props;
@@ -49,12 +49,8 @@ function Search(props) {
   return (
     <div>
       <div className='search-bar-btn'>
-        <input
-          type='text'
-          onChange={this.setSearchQuery}
-          className='search-input'
-        />
-        <button type='button' onClick={this.searchButton} className='btn'>
+        <input type='text' onChange={setSearchQuery} className='search-input' />
+        <button type='button' onClick={searchButton} className='btn'>
           Buscar
         </button>
       </div>
