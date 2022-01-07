@@ -9,10 +9,10 @@ import Feedback from './pages/Feedback';
 function Trivia() {
   return (
     <Routes>
-      <Route path='/' component={Login} />
-      <Route path='/settings' component={Settings} />
-      <Route path='/game' component={Game} />
-      <Route path='/feedback' component={Feedback} />
+      <Route path='/' element={<Login />} />
+      <Route path='/settings' element={<Settings />} />
+      <Route path='/game' element={<Game />} />
+      <Route path='/feedback' element={<Feedback />} />
     </Routes>
   );
 }

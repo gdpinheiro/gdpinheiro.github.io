@@ -13,13 +13,13 @@ function Trybetunes() {
     <div>
       <p>TrybeTunes</p>
       <Routes>
-        <Route path='/' component={Login} />
-        <Route path='/search' component={Search} />
-        <Route path='/album/:id' component={Album} />
-        <Route path='/favorites' component={Favorites} />
-        <Route path='/profile' component={Profile} />
-        <Route path='/profile/edit' component={ProfileEdit} />
-        <Route path='/*' component={NotFound} />
+        <Route path='/' element={<Login />} />
+        <Route path='/search' element={<Search />} />
+        <Route path='/album/:id' element={<Album />} />
+        <Route path='/favorites' element={<Favorites />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/profile/edit' element={<ProfileEdit />} />
+        <Route path='/*' element={<NotFound />} />
       </Routes>
     </div>
   );

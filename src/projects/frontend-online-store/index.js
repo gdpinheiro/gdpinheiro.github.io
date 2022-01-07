@@ -8,10 +8,10 @@ import Checkout from './pages/Checkout';
 function FrontendOnlineStore() {
   return (
     <Routes>
-      <Route path='/' component={Home} />
-      <Route path='/shoppingCart' component={Cart} />
-      <Route path='/product/:id' component={ProductDetail} />
-      <Route path='/Checkout' component={Checkout} />
+      <Route path='/' element={<Home />} />
+      <Route path='/shoppingCart' element={<Cart />} />
+      <Route path='/product/:id' element={<ProductDetail />} />
+      <Route path='/Checkout' element={<Checkout />} />
     </Routes>
   );
 }
